@@ -5,7 +5,9 @@ import com.lorenzofritzsch.similarity.exception.NGramValueException;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class NGramUtils {
+public class NGramUtils {
+
+    private NGramUtils() { }
 
     public static List<String> nGram(String term, int n) {
         if (n < 0) {

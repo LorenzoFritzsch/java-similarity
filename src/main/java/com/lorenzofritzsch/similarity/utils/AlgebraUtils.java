@@ -4,7 +4,9 @@ import com.lorenzofritzsch.similarity.exception.AlgebraicException;
 
 import java.util.List;
 
-public abstract class AlgebraUtils {
+public class AlgebraUtils {
+
+    private AlgebraUtils() { }
 
     public static double computeEuclideanNorm(List<Integer> vector) {
         long quadraticForm = 0;
