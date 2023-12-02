@@ -1,10 +1,10 @@
 # java-similarity
-A Java library offering similarity algorithms, leveraging the beauties of JDK 21.
+A Java library offering similarity algorithms.
 
 ---
 
 ## Algorithms & usages
-### Cosine similarity
+### <u>Cosine similarity</u>
 It's possible to perform a cosine similarity on two texts using the `CosineSimilarity` class:
 
 ```java
@@ -51,3 +51,21 @@ class Example {
 Under the hood, the `CosineSimilarity#compute` method computes the similarity between each text in `texts` and `terms`
 in a dedicated virtual thread, and stores the result in a `Future`, which is the value of the returned `Map`, while the 
 key is the text the similarity was performed on.
+
+### <u>Levenshtein distance</u>
+Use the `LevenshteinDistance` class to calculate the Levenshtein distance between two string:
+
+```java
+
+import com.lorenzofritzsch.similarity.levenshtein.LevenshteinDistance;
+
+class Example {
+
+    public LevenshteinDistanceExample() {
+        String a = "kitten";
+        String b = "sitting";
+
+        int levenshteinDistance = LevenshteinDistance.compute(a, b);
+    }
+}
+```
